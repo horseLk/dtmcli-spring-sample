@@ -2,7 +2,7 @@ server:
   port: 8888
 spring:
   application:
-    name: dtmcli-java-sample-v2
+    name: dtmcli-spring-sample
   datasource:
     url: jdbc:mysql://en.dtm.pub:3306/dtm_barrier?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     username: root

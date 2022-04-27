@@ -15,7 +15,7 @@ public class TccConsumer {
 
     private static final String svc = "http://localhost:8888";
 
-    private static final String appName = "dtmcli-java-sample-v2";
+    private static final String appName = "dtmcli-spring-sample";
 
     public static void tccTransForHttp(Tcc tcc) throws Exception {
         Response outResponse = tcc.callBranch( "", svc + "/TransOutTry", svc + "/TransOutConfirm",
