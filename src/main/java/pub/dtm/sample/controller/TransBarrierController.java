@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pub.dtm.client.barrier.BranchBarrier;
 import pub.dtm.client.constant.Constants;
+import pub.dtm.client.exception.FailureException;
 import pub.dtm.client.model.responses.DtmResponse;
 import pub.dtm.sample.param.TransReq;
 import pub.dtm.sample.utils.DataSourceUtil;
@@ -146,7 +147,7 @@ public class TransBarrierController {
             if (preparedStatement.executeUpdate() > 0) {
                 System.out.println("交易金额更新成功");
             } else {
-                throw new Exception("交易失败");
+                throw new FailureException("交易失败");
             }
         } finally {
             if (null != preparedStatement) {

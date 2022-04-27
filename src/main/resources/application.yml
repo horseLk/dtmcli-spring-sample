@@ -4,7 +4,7 @@ spring:
   application:
     name: dtmcli-java-sample-v2
   datasource:
-    url: jdbc:mysql://localhost:3306/dtm_barrier?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://en.dtm.pub:3306/dtm_barrier?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -12,7 +12,7 @@ spring:
     nacos:
       discovery:
         enabled: true
-        server-addr: '1.14.127.29:8848'
+        server-addr: '127.0.0.1:8848'
         service: ${spring.application.name}
         namespace: c3dc917d-906a-429d-90a9-85012b41014e
         username: nacos
